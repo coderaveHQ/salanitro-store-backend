@@ -74,6 +74,17 @@ const plugins = [
       from: process.env.SENDGRID_FROM,
       order_placed_template: process.env.SENDGRID_ORDER_PLACED_ID
     }
+  },
+  {
+    resolve: `medusa-file-spaces`,
+    options: {
+      spaces_url: process.env.SPACE_URL,
+      bucket: process.env.SPACE_BUCKET,
+      region: process.env.SPACE_REGION,
+      endpoint: process.env.SPACE_ENDPOINT,
+      access_key_id: process.env.SPACE_ACCESS_KEY_ID,
+      secret_access_key: process.env.SPACE_SECRET_ACCESS_KEY
+    }
   }
 ];
 
